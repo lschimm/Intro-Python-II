@@ -6,4 +6,4 @@ class Player:
         self.room = room
 
     def __str__(self):
-        s = f"{self.name} is in {self.room}. \m{self.room.description}"
+        return f"{self.name} is in {self.room}. \n{self.room.description}"

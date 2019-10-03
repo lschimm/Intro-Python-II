@@ -1,7 +1,7 @@
-class Item: 
+class Item:
     def __init__(self, name, description):
         self.name = name
         self.description = description
 
-    def __str__(self)
+    def __str__(self):
         return f"This is {self.name} to help with {self.description}."

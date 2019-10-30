@@ -73,23 +73,24 @@ while True:
             new_player.current_room = new_player.current_room.n_to
         else:
             print(f"****** {player_input} is an invalid direction. Choose again.******")
-    elif player_input.lower().strip():
+    elif player_input.lower().strip() == "s":
         if hasattr(new_player.current_room, "s_to"):
             new_player.current_room = new_player.current_room.s_to
         else:
             print(f"****** {player_input} is an invalid direction. Choose again.******")
-    elif player_input.lower().strip():
+    elif player_input.lower().strip() == "e":
         if hasattr(new_player.current_room, "e_to"):
             new_player.current_room = new_player.current_room.n_to
         else:
             print(f"****** {player_input} is an invalid direction. Choose again.******")
-    elif player_input == "w":
+    elif player_input.lower().strip() == "w":
         if hasattr(new_player.current_room, "w_to"):
             new_player.current_room = new_player.current_room.w_to
         else:
             print(f"****** {player_input} is an invalid direction. Choose again.******")
-    elif player_input.lower().strip():
+    elif player_input.lower().strip() == "q":
         print("Quitting game...")
+        print("Thanks for playing!")
         break
     else:
         print("Invalid direction")

@@ -1,12 +1,13 @@
 class Store:
     def __init__(self, name): # constructor
         self.name = name
-        self.depts = []
+        self.depts = [] # store has many departments
 
     def __str__(self):
-        return f"Store: {self.name}\n"
+        s =  f"Store: {self.name}\n"
 
-        # for n, d in enumerate(self.depts, start=1):
+        for n, d in enumerate(self.depts, start=1):
+          s += f" {n}. {d.name}/n"
     
     def __repr__(self):
         return f"Store({repr(self.name)})"
@@ -23,7 +24,7 @@ class Dept:
     return f"Dept: {self.name}"
   
   def __repr__(self): # generally for programmer consumption
-    return f"Dept({self.name})"
+    return f"Dept({repr(self.name)})"
 
 # s is an object, an instance of Store
 s = Store("Gundams R Us") # "instantiate" a new instance of class store
@@ -34,7 +35,7 @@ s.add_dept(Dept("Schmokey"))
 s.add_dept(Dept("Shmasketball"))
 s.add_dept(Dept("Shmennis"))
 
-print(s)
+# print(s)
 
 num = input("Enter dept number: ")
 

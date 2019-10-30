@@ -8,3 +8,8 @@ class Player:
 
   def __str__(self):
     return f"{self.current_room}"
+
+  def __repr__(self):
+    pass
+  # method that returns a printable representation of the 
+  # given object

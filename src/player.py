@@ -65,33 +65,32 @@ new_player = Player("Juno", room["outside"])
 player_input = ""
 
 while True:
-    print(new_player.name)
-    print(new_player.current_room.name)
-    print(new_player.current_room.description)
-    player_input = input(f"Choose north, south, east, or west.")
-    if player_input.lower().strip() == "n":
-        if hasattr(new_player.current_room, "n_to"):
-            new_player.current_room = new_player.current_room.n_to
-        else:
-            print(f"****** {player_input} is an invalid direction. Choose again.******")
-    elif player_input.lower().strip():
-        if hasattr(new_player.current_room, "s_to"):
-            new_player.current_room = new_player.current_room.s_to
-        else:
-            print(f"****** {player_input} is an invalid direction. Choose again.******")
-    elif player_input.lower().strip():
-        if hasattr(new_player.current_room, "e_to"):
-            new_player.current_room = new_player.current_room.n_to
-        else:
-            print(f"****** {player_input} is an invalid direction. Choose again.******")
-    elif player_input == "w":
-        if hasattr(new_player.current_room, "w_to"):
-            new_player.current_room = new_player.current_room.w_to
-        else:
-            print(f"****** {player_input} is an invalid direction. Choose again.******")
-    elif player_input.lower().strip():
-        print("Quitting game...")
-        break
+  print(new_player.name)
+  print(new_player.current_room.name)
+  print(new_player.current_room.description)
+  player_input = input(f"Choose north, south, east, or west.")
+  if player_input.lower().strip() == 'n':
+    if hasattr(new_player.current_room, 'n_to'):
+      new_player.current_room = new_player.current_room.n_to
+    else: 
+      print(f"****** {player_input} is an invalid direction. Choose again.******")
+  elif player_input.lower().strip():
+    if hasattr(new_player.current_room, 's_to'):
+      new_player.current_room = new_player.current_room.s_to
     else:
-        print("Invalid direction")
-
+      print(f"****** {player_input} is an invalid direction. Choose again.******")
+  elif player_input.lower().strip():
+    if hasattr(new_player.current_room, 'e_to'):
+      new_player.current_room = new_player.current_room.n_to
+    else:
+      print(f"****** {player_input} is an invalid direction. Choose again.******")
+  elif (player_input == "w"):
+    if hasattr(new_player.current_room, "w_to"):
+      new_player.current_room = new_player.current_room.w_to
+    else: 
+      print(f"****** {player_input} is an invalid direction. Choose again.******")
+  elif player_input.lower().strip():
+    print("Quitting game...")
+    break
+  else:
+    print("Invalid direction")

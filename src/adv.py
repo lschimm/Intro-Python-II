@@ -93,5 +93,5 @@ while True:
         print("Thanks for playing!")
         break
     else:
-        print("Invalid direction")
+        print("******Invalid direction******")
 

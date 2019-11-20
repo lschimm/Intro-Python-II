@@ -40,7 +40,7 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 
-new_player = Player["Juno", room["outside"]]
+player = Player["Jin", room["outside"]]
 
 player_input = ""
 
@@ -54,3 +54,8 @@ player_input = ""
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+
+while True:
+    print(player.room.name)
+    print(player.room.description)

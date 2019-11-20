@@ -40,7 +40,7 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 
-player = Player["Jin", room["outside"]]
+player = Player("Jin", room["outside"])
 
 player_input = ""
 
@@ -59,3 +59,30 @@ player_input = ""
 while True:
     print(player.room.name)
     print(player.room.description)
+    player_input = input(f"Choose north, south, east, or west.")
+    if player_input.lower() == "n":
+        if hasattr(player.room, "n_to"):
+            player.room = player.room.n_to
+        else:
+            print (f"-------{player_input} is an invalid input. Please choose again.-------")
+    elif player_input.lower() == "s":
+        if hasattr(player.room, "s_to"):
+            player.room = player.room.s_to
+        else:
+            print (f"-------I'm sorry. {player_input} is an invalid input. Please choose again.-------")
+    elif player_input.lower() == "e":
+        if hasattr(player.room, "e_to"):
+            player.room = player.room.e_to
+        else:
+            print (f"-------I'm sorry. {player_input} is an invalid input. Please choose again.-------")
+    elif player_input.lower() == "w":
+        if hasattr(player.room, "w_to"):
+            player.room = player.room.w_to
+        else:
+            print (f"-------I'm sorry. {player_input} is an invalid input. Please choose again.-------")
+    elif player_input.lower() =="q":
+        print (f"Quitting game.....")
+        print (f"Thanks for playing!")
+        break
+    else:
+        print("Invalid")

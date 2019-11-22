@@ -8,7 +8,7 @@ from item import Shield
 
 room = {
     'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons"  ),
+                     "North of you, the cave mount beckons", [Sword('Rapier', 'shing, shing.', "1d8")] ),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east."""),
@@ -18,7 +18,7 @@ into the darkness. Ahead to the north, a light flickers in
 the distance, but there is no way across the chasm."""),
 
     'narrow':   Room("Narrow Passage", """The narrow passage bends here from west
-to north. The smell of gold permeates the air."""),
+to north. The smell of gold permeates the air.""", [Shield('Buckler', 'block, block.', "+1 to AC")]),
 
     'treasure': Room("Treasure Chamber", """You've found the long-lost treasure
 chamber! Sadly, it has already been completely emptied by
@@ -84,6 +84,9 @@ while True:
             player.room = player.room.w_to
         else:
             print (f"-------I'm sorry. {player_input} is an invalid input. Please choose again.-------")
+    # elif player_input.lower() == "i":
+    #     if hasattr(player.room.items,) 
+    # something along this line ^^^
     elif player_input.lower() =="q":
         print (f"Quitting game.....")
         print (f"Thanks for playing!")

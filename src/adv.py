@@ -1,12 +1,14 @@
 from room import Room
 from player import Player
 from item import Item
+from item import Sword
+from item import Shield
 
 # Declare all the rooms
 
 room = {
     'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons"),
+                     "North of you, the cave mount beckons"  ),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east."""),
@@ -60,6 +62,7 @@ player_input = ""
 while True:
     print(player.room.name)
     print(player.room.description)
+    print(player.room.items)
     player_input = input(f"Choose north, south, east, or west.")
     if player_input.lower() == "n":
         if hasattr(player.room, "n_to"):

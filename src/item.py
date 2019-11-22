@@ -7,15 +7,13 @@ class Item:
         return f"Item name: {self.name}, Item Description: {self.description}"
 
 class Sword(Item):
-    def __init__(self, name, description):
-        super().__init__(name, description, damage)
-        self.name = name
+    def __init__(self, name, description, damage):
+        super().__init__(name, description)
         self.damage = damage
 
 class Shield(Item):
-    def __init__(self, name, description):
-        super().__init__(name, description, armor)
-        self.name = name
+    def __init__(self, name, description, armor):
+        super().__init__(name, description)
         self.armor = armor
         
 # Examples

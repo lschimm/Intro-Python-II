@@ -14,6 +14,10 @@ class Sword(Item):
 
 class Shield(Item):
     def __init__(self, name, description):
-        super().__init__(name, description, block)
+        super().__init__(name, description, armor)
         self.name = name
-        self.block = block
+        self.armor = armor
+
+Rapier = Sword('swooooord', 'shing, shing.', "1d8")
+
+Buckler = Shield("shiiield", "block, block.", "+1 to AC")
